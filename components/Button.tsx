@@ -12,15 +12,17 @@ type ButtonVariant = (typeof BUTTON_VARIANT)[keyof typeof BUTTON_VARIANT];
 interface ButtonProps {
   label: string;
   variant?: ButtonVariant;
+  onPress?: () => void;
 }
 export const Button = ({
   label,
   variant = BUTTON_VARIANT.PRIMARY,
+  onPress,
 }: ButtonProps) => {
   return (
     <View>
       <Pressable
-        onPress={() => alert("You pressed a button.")}
+        onPress={onPress}
         className={twMerge(
           "flex items-center flex-row p-4 gap-3 rounded-lg justify-center w-full",
           variant === BUTTON_VARIANT.PRIMARY && "bg-white"
