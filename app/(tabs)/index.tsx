@@ -10,9 +10,9 @@ export default function HomeScreen() {
       <View className="pt-16">
         <ImageViewer placeholderImageSource={PlaceholderImage} />
       </View>
-      <View className="flex flex-col gap-14">
+      <View className="flex flex-col gap-6 w-80">
         <Button label="Choose a photo" />
-        <Button label="User this photo" />
+        <Button label="User this photo" variant="secondary" />
       </View>
       <StatusBar style="auto" />
     </View>
